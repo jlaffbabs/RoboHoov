@@ -17,6 +17,7 @@ class Room {
       } else if (directions[i] === "W") {
         this.hoover.x -= 1
       }
+      this.dirtCheck()
     }
   }
 

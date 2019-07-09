@@ -45,5 +45,10 @@ describe('Room', function () {
       room.dirtCheck();
       expect(room.dirtCount).toEqual(1);
     })
+
+    it("dirtCount should automatically increment during movement", function () {
+      room.hooverMove("SSENNN");
+      expect(room.dirtCount).toEqual(3);
+    })
   })
 })
