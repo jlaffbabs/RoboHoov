@@ -1,5 +1,6 @@
 class Hoover {
   constructor(hooverPosition) {
-    this.position = hooverPosition;
+    this.x = hooverPosition[0];
+    this.y = hooverPosition[1];
   }
 }
