@@ -3,6 +3,7 @@ class Room {
     this.size = roomSize;
     this.dirtSpots = dirtSpots;
     this.hoover = new Hoover(hooverPosition);
+    this.dirtCount = 0;
   }
 
   hooverMove(directions) {
@@ -15,6 +16,14 @@ class Room {
         this.hoover.x += 1
       } else if (directions[i] === "W") {
         this.hoover.x -= 1
+      }
+    }
+  }
+
+  dirtCheck() {
+    for (var i = 0; i < this.dirtSpots.length; i++) {
+      if ((this.hoover.x === this.dirtSpots[i][0]) && (this.hoover.y === this.dirtSpots[i][1])) {
+        this.dirtCount += 1
       }
     }
   }

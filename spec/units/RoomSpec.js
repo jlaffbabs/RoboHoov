@@ -37,4 +37,13 @@ describe('Room', function () {
       expect(room.hoover.x).toEqual(2);
     })
   })
+  
+  describe("#dirtCheck", function () {
+    it("should add to the count of dirt spots cleaned", function () {
+      room.hoover.x = 1;
+      room.hoover.y = 0;
+      room.dirtCheck();
+      expect(room.dirtCount).toEqual(1);
+    })
+  })
 })
