@@ -1,6 +1,6 @@
 class Room {
   constructor(roomSize, dirtSpots) {
-    this.roomSize = roomSize;
+    this.size = roomSize;
     this.dirtSpots = dirtSpots;
   }
 }

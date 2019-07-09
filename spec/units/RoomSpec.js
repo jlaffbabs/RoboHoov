@@ -8,7 +8,7 @@ describe('Room', function () {
   })
 
   it("should construct the room with the correct size", function () {
-    expect(room.roomSize).toEqual(aRoomSize);
+    expect(room.size).toEqual(aRoomSize);
   })
 
   it("should place the dirt patches in the correct place", function () {
