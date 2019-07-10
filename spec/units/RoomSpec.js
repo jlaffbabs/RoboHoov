@@ -47,8 +47,15 @@ describe('Room', function () {
     })
 
     it("dirtCount should automatically increment during movement", function () {
+      console.log(room.hoover.x)
+      console.log(room.hoover.y)
       room.hooverMove("SSENNN");
       expect(room.dirtCount).toEqual(3);
+    })
+
+    it("dirtCheck should not count the same spot twice", function () {
+      room.hooverMove("SSNS");
+      expect(room.dirtCount).toEqual(1);
     })
   })
 })
