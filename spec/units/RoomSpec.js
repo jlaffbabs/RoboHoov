@@ -1,11 +1,14 @@
 const Room = require('../../src/Room')
 describe('Room', function () {
   var room;
-  const  aRoomSize = [5, 5];
-  const someDirtSpots = [[1, 0], [2, 2], [2, 3]];
-  const aHooverPosition = [1, 2];
+  let aRoomSize;
+  let someDirtSpots;
+  let aHooverPosition;
 
   beforeEach(function () {
+    aRoomSize = [5, 5];
+    someDirtSpots = [[1, 0], [2, 2], [2, 3]];
+    aHooverPosition = [1, 2];
     room = new Room(aRoomSize, someDirtSpots, aHooverPosition);
   })
 
