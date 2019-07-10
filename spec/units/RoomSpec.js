@@ -1,8 +1,8 @@
 describe('Room', function () {
   var room;
-  var aRoomSize = [5, 5];
-  var someDirtSpots = [[1, 0], [2, 2], [2, 3]];
-  var aHooverPosition = [1, 2];
+  const  aRoomSize = [5, 5];
+  const someDirtSpots = [[1, 0], [2, 2], [2, 3]];
+  const aHooverPosition = [1, 2];
 
   beforeEach(function () {
     room = new Room(aRoomSize, someDirtSpots, aHooverPosition);
@@ -40,15 +40,11 @@ describe('Room', function () {
   
   describe("#dirtCheck", function () {
     it("should add to the count of dirt spots cleaned", function () {
-      room.hoover.x = 1;
-      room.hoover.y = 0;
-      room.dirtCheck();
+      room.hooverMove("SS");
       expect(room.dirtCount).toEqual(1);
     })
 
     it("dirtCount should automatically increment during movement", function () {
-      console.log(room.hoover.x)
-      console.log(room.hoover.y)
       room.hooverMove("SSENNN");
       expect(room.dirtCount).toEqual(3);
     })
@@ -56,6 +52,15 @@ describe('Room', function () {
     it("dirtCheck should not count the same spot twice", function () {
       room.hooverMove("SSNS");
       expect(room.dirtCount).toEqual(1);
+    })
+  })
+
+  describe("#block", function () {
+    it("should block the hoover from moving", function () {
+      room.hooverMove("WW")
+      expect(room.hoover.x).toEqual(0);
+      room.hooverMove("NNNN")
+      expect(room.hoover.y).toEqual(5);
     })
   })
 })

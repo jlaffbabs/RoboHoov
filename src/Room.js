@@ -17,6 +17,8 @@ class Room {
       } else if (directions[i] === "W") {
         this.hoover.x -= 1
       }
+      this.blockX()
+      this.blockY()
       this.dirtCheck()
     }
   }
@@ -29,4 +31,21 @@ class Room {
       }
     }
   }
+
+  blockX() {
+    if (this.hoover.x > this.size[0]) {
+      this.hoover.x -=1
+    } else if (this.hoover.x < 0) {
+      this.hoover.x +=1
+    }
+  }
+
+  blockY() {
+    if (this.hoover.y > this.size[1]) {
+      this.hoover.y -=1 
+    } else if (this.hoover.y < 0) {
+      this.hoover.y +=1
+    }
+  }
+
 }
