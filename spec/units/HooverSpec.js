@@ -1,4 +1,5 @@
 describe('Hoover', function () {
+  const Hoover = require('../src/Hoover')
   var hoover;
   var aHooverPosition = [1, 2];
 
