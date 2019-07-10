@@ -16,6 +16,8 @@ class Room {
         this.hoover.x += 1
       } else if (directions[i] === "W") {
         this.hoover.x -= 1
+      } else {
+        throw new Error("Please give Cardinal Directions")
       }
       this.blockX()
       this.blockY()

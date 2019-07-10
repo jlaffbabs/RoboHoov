@@ -36,6 +36,12 @@ describe('Room', function () {
       expect(room.hoover.y).toEqual(1);
       expect(room.hoover.x).toEqual(2);
     })
+
+    it("should throw an error if non-cardinal direction is given", function () {
+      expect(function() { room.hooverMove("12") }).toThrow(new Error("Please give Cardinal Directions"))
+      expect(function() { room.hooverMove("right") }).toThrow(new Error("Please give Cardinal Directions"))
+      expect(function() { room.hooverMove("SENJ") }).toThrow(new Error("Please give Cardinal Directions"))
+    })
   })
   
   describe("#dirtCheck", function () {
