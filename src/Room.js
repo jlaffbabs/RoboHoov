@@ -1,3 +1,5 @@
+const Hoover = require('./Hoover')
+
 class Room {
   constructor(roomSize, dirtSpots, hooverPosition) {
     this.size = roomSize;
@@ -51,3 +53,5 @@ class Room {
   }
 
 }
+
+module.exports = Room;

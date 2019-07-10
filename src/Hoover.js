@@ -6,4 +6,5 @@ class Hoover {
   }
 
 }
+
 module.exports = Hoover;

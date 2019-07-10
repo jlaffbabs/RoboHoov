@@ -1,3 +1,4 @@
+const Room = require('../../src/Room')
 describe('Room', function () {
   var room;
   const  aRoomSize = [5, 5];
