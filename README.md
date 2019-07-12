@@ -17,7 +17,7 @@ retaining its location.
 ## Testing
 Run tests using `npm test`
 
-##Process
+## Process
 I built this project in Javascript as I feel most comfortable in it at the
 moment. I strictly followed TDD and used Jasmine to test. Initially this was
 a Jasmine standalone that ran in the browser but halfway through I switched to
