@@ -1,11 +1,12 @@
 const Hoover = require('./Hoover')
 
 class Room {
-  constructor(roomSize, dirtSpots, hooverPosition) {
+  constructor(roomSize, dirtSpots, hooverPosition, directions) {
     this.size = roomSize;
     this.dirtSpots = dirtSpots;
     this.hoover = new Hoover(hooverPosition);
     this.dirtCount = 0;
+    this.directions = directions
   }
 
   hooverMove(directions) {

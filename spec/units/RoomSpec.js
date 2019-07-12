@@ -9,7 +9,8 @@ describe('Room', function () {
     aRoomSize = [5, 5];
     someDirtSpots = [[1, 0], [2, 2], [2, 3]];
     aHooverPosition = [1, 2];
-    room = new Room(aRoomSize, someDirtSpots, aHooverPosition);
+    someDirections = "NNESEESWNWW"
+    room = new Room(aRoomSize, someDirtSpots, aHooverPosition, someDirections);
   })
 
   it("should construct the room with the correct size", function () {
