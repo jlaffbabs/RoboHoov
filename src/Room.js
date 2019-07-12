@@ -30,9 +30,9 @@ class Room {
 
   dirtCheck() {
     for (var i = 0; i < this.dirtSpots.length; i++) {
-      if ((this.hoover.x === this.dirtSpots[i][0]) && (this.hoover.y === this.dirtSpots[i][1]) && (this.dirtSpots[i][2] !== "c")) {
+      if ((this.hoover.x === this.dirtSpots[i][0]) && (this.hoover.y === this.dirtSpots[i][1])) {
         this.dirtCount += 1
-        this.dirtSpots[0].push("c")
+        this.dirtSpots.splice(i, 1)
       }
     }
   }
