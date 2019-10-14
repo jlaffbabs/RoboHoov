@@ -1,5 +1,4 @@
 # RoboHoov
-## Tray Tech Test
 
 ## Description
 This Javascript project simulates a Robotic Hoover that follows directions around an
